@@ -3,9 +3,13 @@
   "version": "0.0.1",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "const": "^1.0.0",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "hbs": "^4.0.1",
     "newrelic": "^5.0.0",
+    "path": "^0.12.7",
     "rollbar": "^2.5.1",
     "sequelize": "^4.42.0"
   },
