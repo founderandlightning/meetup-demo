@@ -20,7 +20,5 @@ jobs:
             - "b1:c9:ad:27:ba:c7:96:a6:c8:02:90:e7:d3:75:04:6f"
       - deploy:
           name: Deploy Master to Heroku
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                git push heroku master
-            fi
+          command: git push --force https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PROD_APP_NAME.git HEAD:refs/heads/master
+         
