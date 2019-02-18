@@ -14,7 +14,7 @@ jobs:
           name: Install Node dependencies
           command: |
              npm install
-       - run:
+      - run:
           name: Check Rejected Commits
           command: bash ./deploy
       - run: bash .circleci/setup-heroku.sh
