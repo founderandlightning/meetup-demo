@@ -1,0 +1,11 @@
+#!/bin/bash
+sudo apt-get install jq
+
+content=$(wget http://production-review-tool.herokuapp.com/api/checkReadyToDeploy?app_name=meetup-demo -q -O -)
+
+echo $content;  
+status=$(echo $content | jq '.success')
+if [ $status == 'true' ]; then
+ exit 0
+fi
+exit 1
