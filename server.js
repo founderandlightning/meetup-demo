@@ -20,13 +20,13 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: false }));
 
 app.get("/", index);
 
-app.get("/error", (req, res) => {
+app.get("/calculate", (req, res) => {
   try {
-    throw new Error("something bad happened in test");
+    throw new Error("Can't divide by zero");
   } catch (error) {
     rollbar.error(error);
   }
-  res.send("Error posted to rollbar");
+  res.send("Sorry! something went wrong.");
 });
 
 app.use(rollbar.errorHandler());
