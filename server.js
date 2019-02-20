@@ -2,7 +2,7 @@ require("newrelic");
 const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
-const body_parser = require("body-parser");
+const bodyParser = require("body-parser");
 
 dotenv.load();
 
@@ -13,15 +13,10 @@ const rollbar = new Rollbar(process.env.ROLLBAR_ACCESS_TOKEN);
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(require('express-naked-redirect')({
-  subDomain: 'www',
-  https: true
-}))
-
 app.set("views", path.join(__dirname, "./app/views"));
 app.set("view engine", "hbs");
-app.use(body_parser.json({ limit: "50mb" }));
-app.use(body_parser.urlencoded({ limit: "50mb", extended: false }));
+app.use(bodyParser.json({ limit: "50mb" }));
+app.use(bodyParser.urlencoded({ limit: "50mb", extended: false }));
 
 app.get("/", index);
 
