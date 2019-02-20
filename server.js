@@ -13,6 +13,11 @@ const rollbar = new Rollbar(process.env.ROLLBAR_ACCESS_TOKEN);
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(require('express-naked-redirect')({
+  subDomain: 'www',
+  https: true
+}))
+
 app.set("views", path.join(__dirname, "./app/views"));
 app.set("view engine", "hbs");
 app.use(body_parser.json({ limit: "50mb" }));
