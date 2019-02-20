@@ -1,4 +1,4 @@
-const title = "Code reviewee tool";
+const title = "Code reviewee tool test";
 const getTitle = () => title;
 
 module.exports = { getTitle };
