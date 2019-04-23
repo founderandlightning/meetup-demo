@@ -1145,7 +1145,7 @@ Your data model has started to stabilize and you're in a position to create a pu
  Envelope loving APIs typically include pagination data in the envelope itself. And I don't blame them - until recently, there weren't many better options. The right way to include pagination details today is using the [Link header introduced by RFC 5988](http://tools.ietf.org/html/rfc5988#page-6).
 
 
-# An API that uses the Link header can return a set of ready-made links so the API consumer doesn't have to construct links themselves. This is especially important when pagination is [cursor based](https://developers.facebook.com/docs/reference/api/pagination/). Here is an example of a Link header used properly, grabbed from [GitHub](http://developer.github.com/v3/#pagination)'s documentation:
+ An API that uses the Link header can return a set of ready-made links so the API consumer doesn't have to construct links themselves. This is especially important when pagination is [cursor based](https://developers.facebook.com/docs/reference/api/pagination/). Here is an example of a Link header used properly, grabbed from [GitHub](http://developer.github.com/v3/#pagination)'s documentation:
 
 
 ```
@@ -1244,7 +1244,7 @@ Your data model has started to stabilize and you're in a position to create a pu
  However, it can be very useful to notify the consumer of their limits before they actually hit it. This is an area that currently lacks standards but has a number of [popular conventions using HTTP response headers](http://stackoverflow.com/questions/16022624/examples-of-http-api-rate-limiting-http-response-headers).
 
 
-# At a minimum, include the following headers (using Twitter's [naming conventions](https://dev.twitter.com/docs/rate-limiting/1.1) as headers typically don't have mid-word capitalization):
+ At a minimum, include the following headers (using Twitter's [naming conventions](https://dev.twitter.com/docs/rate-limiting/1.1) as headers typically don't have mid-word capitalization):
 
 
 
