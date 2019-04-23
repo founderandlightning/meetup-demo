@@ -10,19 +10,6 @@
 **State: Draft**
 
 
-
-
-
-# API Documentation
-
-
-## 22<sup>nd</sup> April 2019
-
-**Author: Jaspinder Singh <[jaspinder@ucreate.co.in](mailto:jaspinder@ucreate.co.in)>**
-
-**State: Draft**
-
-
 # 
 
 
@@ -38,26 +25,26 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 *   [An API is a user interface for a developer - so put some effort into making it pleasant](#Key requirements for the API)
 *   [Use RESTful URLs and actions](#Use RESTful URLs and actions)
-*   Use SSL everywhere, no exceptions
-*   An API is only as good as its documentation - so have great documentation
-*   Version via the URL, not via headers
-*   Use query parameters for advanced filtering, sorting & searching
-*   Provide a way to limit which fields are returned from the API
-*   Return something useful from POST, PATCH & PUT requests
-*   HATEOAS isn't practical just yet
-*   Use JSON where possible, XML only if you have to
-*   You should use camelCase with JSON, but snake_case is 20% easier to read
-*   Pretty print by default & ensure gzip is supported
-*   Don't use response envelopes by default
-*   Consider using JSON for POST, PUT and PATCH request bodies
-*   Paginate using Link headers
-*   Provide a way to autoload related resource representations
-*   Provide a way to override the HTTP method
-*   Provide useful response headers for rate limiting
-*   Use token based authentication, transported over OAuth2 where delegation is needed
-*   Include response headers that facilitate caching
-*   Define a consumable error payload
-*   Effectively use HTTP Status codes
+*   [Use SSL everywhere, no exceptions](#SSL everywhere - all the time)
+*   [An API is only as good as its documentation - so have great documentation](#Documentation)
+*   [Version via the URL, not via headers](#Versioning)
+*   [Use query parameters for advanced filtering, sorting & searching](#Result filtering, sorting & searching)
+*   [Provide a way to limit which fields are returned from the API](#Limiting which fields are returned by the API)
+*   [Return something useful from POST, PATCH & PUT requests](#Updates & creation should return a resource representation)
+*   [HATEOAS isn't practical just yet](#Should you HATEOAS?)
+*   [Use JSON where possible, XML only if you have to](#JSON only responses)
+*   [You should use camelCase with JSON, but snake_case is 20% easier to read](#snake_case vs camelCase for field names)
+*   [Pretty print by default & ensure gzip is supported](#Pretty print by default & ensure gzip is supported)
+*   [Don't use response envelopes by default](#Don't use an envelope by default, but make it possible when needed)
+*   [Consider using JSON for POST, PUT and PATCH request bodies](#JSON encoded POST, PUT & PATCH bodies)
+*   [Paginate using Link headers](#Pagination)
+*   [Provide a way to autoload related resource representations](#Auto loading related resource representations)
+*   [Provide a way to override the HTTP method](#Overriding the HTTP method)
+*   [Provide useful response headers for rate limiting](#Rate limiting)
+*   [Use token based authentication, transported over OAuth2 where delegation is needed](#Authentication)
+*   [Include response headers that facilitate caching](#Caching)
+*   [Define a consumable error payload](#Errors)
+*   [Effectively use HTTP Status codes](#HTTP status codes)
 
 
 ## Key requirements for the API
@@ -149,7 +136,7 @@ Your data model has started to stabilize and you're in a position to create a pu
 ## Documentation
 
 
-#An API is only as good as its documentation. The docs should be easy to find and publically accessible. Most developers will check out the docs before attempting any integration effort. When the docs are hidden inside a PDF file or require signing in, they're not only difficult to find but also not easy to search.
+An API is only as good as its documentation. The docs should be easy to find and publically accessible. Most developers will check out the docs before attempting any integration effort. When the docs are hidden inside a PDF file or require signing in, they're not only difficult to find but also not easy to search.
 
 
  The docs should show examples of complete request/response cycles. Preferably, the requests should be pastable examples - either links that can be pasted into a browser or curl examples that can be pasted into a terminal. [GitHub](http://developer.github.com/v3/gists/#list-gists) and [Stripe](https://stripe.com/docs/api) do a great job with this.
