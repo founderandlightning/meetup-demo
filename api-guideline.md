@@ -10,36 +10,6 @@
 **State: Draft**
 
 
-# 
-<!----- Conversion time: 3.132 seconds.
-
-
-Using this Markdown file:
-
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β17
-* Mon Apr 22 2019 23:54:10 GMT-0700 (PDT)
-* Source doc: https://docs.google.com/a/ucreate.co.in/open?id=1ZKmmRXiEeLfsLW8CNAQRHHEZsbk22WQO90Fk1gFtEuo
-* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server.
-
-WARNING:
-You have 152 H1 headings. You may want to use the "H1 -> H2" option to demote all headings by one level.
-
------>
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 1; ALERTS: 1.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
 
 
 
@@ -293,10 +263,8 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 # 
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/ucreate-API-guidelines-draft0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
-
-![alt_text](images/ucreate-API-guidelines-draft0.png "image_tooltip")
+![alt_text](https://www.vinaysahni.com/images/201305-xml-vs-json-api.png "")
 
 
 
@@ -335,17 +303,10 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# $ curl https://api.github.com/users/veesahni > with-whitespace.txt
-
-
-# $ ruby -r json -e 'puts JSON JSON.parse(STDIN.read)' < with-whitespace.txt > without-whitespace.txt
-
-
-# $ gzip -c with-whitespace.txt > with-whitespace.txt.gz
-
-
-# $ gzip -c without-whitespace.txt > without-whitespace.txt.gz
+ $ curl https://api.github.com/users/veesahni > with-whitespace.txt
+ $ ruby -r json -e 'puts JSON JSON.parse(STDIN.read)' < with-whitespace.txt > without-whitespace.txt
+ $ gzip -c with-whitespace.txt > with-whitespace.txt.gz
+ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz
 ```
 
 
@@ -373,24 +334,12 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 
 ```
-
-
-# {
-
-
-#   "data" : {
-
-
-#     "id" : 123,
-
-
-#     "name" : "John"
-
-
-#   }
-
-
-# }
+ {
+   "data" : {
+     "id" : 123,
+     "name" : "John"
+   }
+ }
 ```
 
 
@@ -412,26 +361,13 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# callback_function({
-
-
-#   status_code: 200,
-
-
-#   next_page: "https://..",
-
-
-#   response: {
-
-
-#     ... actual JSON response body ... 
-
-
-#   }
-
-
-# })
+ callback_function({
+   status_code: 200,
+   next_page: "https://..",
+   response: {
+     ... actual JSON response body ... 
+   }
+ })
 ```
 
 
@@ -468,8 +404,7 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# Link: <https://api.github.com/user/repos?page=3&per_page=100>; rel="next", <https://api.github.com/user/repos?page=50&per_page=100>; rel="last"
+ Link: <https://api.github.com/user/repos?page=3&per_page=100>; rel="next", <https://api.github.com/user/repos?page=50&per_page=100>; rel="last"
 ```
 
 
@@ -491,7 +426,6 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
 # GET /tickets/12?embed=customer.name,assigned_user
 ```
 
@@ -502,41 +436,18 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# {
-
-
-#   "id" : 12,
-
-
-#   "subject" : "I have a question!",
-
-
-#   "summary" : "Hi, ....",
-
-
-#   "customer" : {
-
-
-#     "name" : "Bob"
-
-
-#   },
-
-
-#   assigned_user: {
-
-
-#    "id" : 42,
-
-
-#    "name" : "Jim",
-
-
-#   }
-
-
-# }
+ {
+   "id" : 12,
+   "subject" : "I have a question!",
+   "summary" : "Hi, ....",
+   "customer" : {
+     "name" : "Bob"
+   },
+   assigned_user: {
+    "id" : 42,
+    "name" : "Jim",
+   }
+ }
 ```
 
 
@@ -633,20 +544,11 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# {
-
-
-#   "code" : 1234,
-
-
-#   "message" : "Something bad happened :(",
-
-
-#   "description" : "More details about the error here"
-
-
-# }
+ {
+   "code" : 1234,
+   "message" : "Something bad happened :(",
+   "description" : "More details about the error here"
+ }
 ```
 
 
@@ -656,53 +558,22 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# {
-
-
-#   "code" : 1024,
-
-
-#   "message" : "Validation Failed",
-
-
-#   "errors" : [
-
-
-#     {
-
-
-#       "code" : 5432,
-
-
-#       "field" : "first_name",
-
-
-#       "message" : "First name cannot have fancy characters"
-
-
-#     },
-
-
-#     {
-
-
-#        "code" : 5622,
-
-
-#        "field" : "password",
-
-
-#        "message" : "Password cannot be blank"
-
-
-#     }
-
-
-#   ]
-
-
-# }
+ {
+   "code" : 1024,
+   "message" : "Validation Failed",
+   "errors" : [
+     {
+       "code" : 5432,
+       "field" : "first_name",
+       "message" : "First name cannot have fancy characters"
+     },
+     {
+        "code" : 5622,
+        "field" : "password",
+        "message" : "Password cannot be blank"
+     }
+   ]
+ }
 ```
 
 
@@ -931,7 +802,6 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
 # GET /tickets?fields=id,subject,customer_name,updated_at&state=open&sort=-updated_at
 ```
 
@@ -1017,17 +887,10 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# $ curl https://api.github.com/users/veesahni > with-whitespace.txt
-
-
-# $ ruby -r json -e 'puts JSON JSON.parse(STDIN.read)' < with-whitespace.txt > without-whitespace.txt
-
-
-# $ gzip -c with-whitespace.txt > with-whitespace.txt.gz
-
-
-# $ gzip -c without-whitespace.txt > without-whitespace.txt.gz
+ $ curl https://api.github.com/users/veesahni > with-whitespace.txt
+ $ ruby -r json -e 'puts JSON JSON.parse(STDIN.read)' < with-whitespace.txt > without-whitespace.txt
+ $ gzip -c with-whitespace.txt > with-whitespace.txt.gz
+ $ gzip -c without-whitespace.txt > without-whitespace.txt.gz
 ```
 
 
@@ -1056,23 +919,12 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# {
-
-
-#   "data" : {
-
-
-#     "id" : 123,
-
-
-#     "name" : "John"
-
-
-#   }
-
-
-# }
+ {
+   "data" : {
+     "id" : 123,
+     "name" : "John"
+   }
+ }
 ```
 
 
@@ -1094,26 +946,13 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# callback_function({
-
-
-#   status_code: 200,
-
-
-#   next_page: "https://..",
-
-
-#   response: {
-
-
-#     ... actual JSON response body ... 
-
-
-#   }
-
-
-# })
+ callback_function({
+   status_code: 200,
+   next_page: "https://..",
+   response: {
+     ... actual JSON response body ... 
+   }
+ })
 ```
 
 
@@ -1150,7 +989,6 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
 # Link: <https://api.github.com/user/repos?page=3&per_page=100>; rel="next", <https://api.github.com/user/repos?page=50&per_page=100>; rel="last"
 ```
 
@@ -1173,7 +1011,6 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
 # GET /tickets/12?embed=customer.name,assigned_user
 ```
 
@@ -1184,41 +1021,18 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# {
-
-
-#   "id" : 12,
-
-
-#   "subject" : "I have a question!",
-
-
-#   "summary" : "Hi, ....",
-
-
-#   "customer" : {
-
-
-#     "name" : "Bob"
-
-
-#   },
-
-
-#   assigned_user: {
-
-
-#    "id" : 42,
-
-
-#    "name" : "Jim",
-
-
-#   }
-
-
-# }
+ {
+   "id" : 12,
+   "subject" : "I have a question!",
+   "summary" : "Hi, ....",
+   "customer" : {
+     "name" : "Bob"
+   },
+   assigned_user: {
+    "id" : 42,
+    "name" : "Jim",
+   }
+ }
 ```
 
 
@@ -1315,20 +1129,11 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# {
-
-
-#   "code" : 1234,
-
-
-#   "message" : "Something bad happened :(",
-
-
-#   "description" : "More details about the error here"
-
-
-# }
+ {
+   "code" : 1234,
+   "message" : "Something bad happened :(",
+   "description" : "More details about the error here"
+ }
 ```
 
 
@@ -1338,53 +1143,22 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 ```
 
-
-# {
-
-
-#   "code" : 1024,
-
-
-#   "message" : "Validation Failed",
-
-
-#   "errors" : [
-
-
-#     {
-
-
-#       "code" : 5432,
-
-
-#       "field" : "first_name",
-
-
-#       "message" : "First name cannot have fancy characters"
-
-
-#     },
-
-
-#     {
-
-
-#        "code" : 5622,
-
-
-#        "field" : "password",
-
-
-#        "message" : "Password cannot be blank"
-
-
-#     }
-
-
-#   ]
-
-
-# }
+ {
+   "code" : 1024,
+   "message" : "Validation Failed",
+   "errors" : [
+     {
+       "code" : 5432,
+       "field" : "first_name",
+       "message" : "First name cannot have fancy characters"
+     },
+     {
+        "code" : 5622,
+        "field" : "password",
+        "message" : "Password cannot be blank"
+     }
+   ]
+ }
 ```
 
 
