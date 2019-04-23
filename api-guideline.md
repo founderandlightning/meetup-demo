@@ -23,7 +23,7 @@ Your data model has started to stabilize and you're in a position to create a pu
 
 
 
-*   [An API is a user interface for a developer - so put some effort into making it pleasant](#Key requirements for the API)
+*   [An API is a user interface for a developer - so put some effort into making it pleasant](#key-requirements-for-the-api)
 *   [Use RESTful URLs and actions](#Use RESTful URLs and actions)
 *   [Use SSL everywhere, no exceptions](#SSL everywhere - all the time)
 *   [An API is only as good as its documentation - so have great documentation](#Documentation)
