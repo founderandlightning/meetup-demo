@@ -28,7 +28,7 @@ Your data model has started to stabilize and you're in a position to create a pu
 *   [Use SSL everywhere, no exceptions](#SSL everywhere - all the time)
 *   [An API is only as good as its documentation - so have great documentation](#Documentation)
 *   [Version via the URL, not via headers](#Versioning)
-*   [Use query parameters for advanced filtering, sorting & searching](#Result filtering, sorting & searching)
+*   [Use query parameters for advanced filtering, sorting & searching](#Result-filtering-sorting-&-searching)
 *   [Provide a way to limit which fields are returned from the API](#Limiting which fields are returned by the API)
 *   [Return something useful from POST, PATCH & PUT requests](#Updates & creation should return a resource representation)
 *   [HATEOAS isn't practical just yet](#Should you HATEOAS?)
