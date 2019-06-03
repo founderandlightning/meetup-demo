@@ -3,6 +3,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const path = require("path");
 const bodyParser = require("body-parser");
+const forceDomain = require("forcedomain");
 
 dotenv.load();
 
@@ -12,6 +13,13 @@ const index = require("./app/routes/index");
 const rollbar = new Rollbar(process.env.ROLLBAR_ACCESS_TOKEN);
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.use(
+  forceDomain({
+    hostname: "uat.jassiindustries.tk",
+    protocol: " https"
+  })
+);
 
 app.set("views", path.join(__dirname, "./app/views"));
 app.set("view engine", "hbs");
