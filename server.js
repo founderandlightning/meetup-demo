@@ -17,7 +17,7 @@ const port = process.env.PORT || 3000;
 app.use(
   forceDomain({
     hostname: "uat.jassiindustries.tk",
-    protocol: " https"
+    protocol: "https"
   })
 );
 
