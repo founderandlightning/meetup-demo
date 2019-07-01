@@ -34,7 +34,7 @@ app.get("/calculate", (req, res) => {
   } catch (error) {
     rollbar.error(error);
   }
-  res.send("Sorry! something went wrong");
+  res.send("Sorry! something went wrong.");
 });
 
 app.use(rollbar.errorHandler());
