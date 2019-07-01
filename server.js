@@ -30,7 +30,7 @@ app.get("/", index);
 
 app.get("/calculate", (req, res) => {
   try {
-    throw new Error("Can't divide by zero to one");
+    throw new Error("Can't divide by zero to one two");
   } catch (error) {
     rollbar.error(error);
   }
